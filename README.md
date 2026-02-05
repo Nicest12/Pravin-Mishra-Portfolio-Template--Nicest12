@@ -36,7 +36,24 @@ Original:
 Add this line (example):
 
 ```html
-<p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
+ </p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Nwogu Nice Ihuoma</p>
+
+A small code snippet (footer section + JS if used)
+  <script>
+      const today = new Date();
+
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+      const day = String(today.getDate()).padStart(2, '0'); // 2-digit day
+      const month = months[today.getMonth()]; // Month abbreviation
+      const year = today.getFullYear(); // 4-digit year
+
+      // Format: DD Mon YYYY
+      const formattedDate = `${day} ${month} ${year}`;
+
+      document.getElementById("deployDate").textContent = formattedDate;
+    </script>
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
